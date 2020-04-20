@@ -1,4 +1,5 @@
 # quiz.templet
+[See it live here](https://kdm6389.github.io/quiz.templet/)
 this templet is design for MCQ where there is data of QUESTION and List of correct answer and list of trap answer.
 
 MCQ Single Choice, 
