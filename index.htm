@@ -3,43 +3,72 @@
 <head>
 <meta name="viewport" content="width=device-width, user-scalable=no"/>
 <title>MCQ project</title>
-  
-  
-<style>
-#myDIV {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  background-color: lightblue;
-  margin-top: 20px;
-}
-</style>
-  
-  
-<script>
-function ShowAnswer() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#show').click(function() {
+            $('#info').toggle();
+            var visible = $('#info').is(":visible");
+if(visible){
+  $('a',this).html('Hide details');
+}else{
+    $('a',this).html('Show details');}
+            
+        });
+    });
 </script>
+
+
   
 </head>
 <body>
 
 <p> Test page main1</p>
-  This is MCQ question</br>
-  <input type="radio"> a) Correct Answer</input></br>
-  <input type="radio"> b) Wrong answer 1</input></br>
-  <input type="radio"> c) Wrong Answer 2</input></br>
-  <input type="radio"> d) Wrong answer 3</input></br>
-  <input type="radio"> e) Wrong AnSwer 4</input></br>
 
-<button onclick="ShowAnswer()">Show/Hide Answer</button>
-<div id="myDIV">This is my DIV element.</div>
+<div id="question_templet">
+
+<div id="Question_Set"> 
+<p id="question_area"></p>
+<input type="radio"> a) Correct Answer</input></br>
+<input type="radio"> b) Wrong answer 1</input></br>
+<input type="radio"> c) Wrong Answer 2</input></br>
+<input type="radio"> d) Wrong answer 3</input></br>
+<input type="radio"> e) Wrong AnSwer 4</input></br>
+</div>
+
+
+<p id="demo"></p>
+
+<script>
+var myObj, x;
+myObj = { name: "John", age: 30, city: "New York" };
+x = myObj.name;
+document.getElementById("question_area").innerHTML = x;
+</script>
+
+
+
+
+<span id="show" class="" style="text-decoration: underline">
+	<a href="#" class="fill-div">
+		Show details
+	</a>
+</span>
+
+<div id="info" style="display:none; margin-left:2em">
+	<i>Details</br>shown here</i>
+</div>
+
+</div id="Question_Set">
+
+
+
+
+
+
+
 
 
 </body>
