@@ -2,6 +2,7 @@
 this templet is design for MCQ where there is data of QUESTION and List of correct answer and list of trap answer.
 
 MCQ Single Choice, 
+
 this is type where there are 4/5 answer are provide per question where ONLY one correct anwer
 
 MCQ Multi choice,
