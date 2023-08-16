@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+//function randomNumber(min, max) {
+//    return Math.floor(Math.random() * (max - min) + min);
+//}
+ 
+// Function call 
+//console.log( randomNumber(0, 4) ); //for gnrating 0,1,2,3 us range [0,4(
+</script>
+</head>
+
+
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+
+let text = '{"QuestionsSet":[' +
+'{"Question":"John", "Ans":"Doe", "Opt2":"Doe", "Opt3":"Doe", "Opt4":"Doe" },' +
+'{"Question":"kohn1", "Ans":"Doe1", "Opt2":"Doe1", "Opt3":"Doe1", "Opt4":"Doe1" },' +
+'{"Question":"lohdsfsdn2", "Ans":"Doe2", "Opt2":"Doe2", "Opt3":"Doe2", "Opt4":"Doe2" },' +
+'{"Question":"mohsdfsdn1", "Ans":"Doe1", "Opt2":"Doe1", "Opt3":"Doe1", "Opt4":"Doe1" },' +
+'{"Question":"nohn2", "Ans":"Doe2", "Opt2":"Doe2", "Opt3":"Doe2", "Opt4":"Doe2" },' +
+'{"Question":"oosdfhn1", "Ans":"Doe1", "Opt2":"Doe1", "Opt3":"Doe1", "Opt4":"Doe1" },' +
+'{"Question":"poddddhn2", "Ans":"Doe2", "Opt2":"Doe2", "Opt3":"Doe2", "Opt4":"Doe2" },' +
+'{"Question":"qohn1", "Ans":"Doe1", "Opt2":"Doe1", "Opt3":"Doe1", "Opt4":"Doe1" },' +
+'{"Question":"rohn2", "Ans":"Doe2", "Opt2":"Doe2", "Opt3":"Doe2", "Opt4":"Doe2" },' +
+'{"Question":"sohn1", "Ans":"Doe1", "Opt2":"Doe1", "Opt3":"Doe1", "Opt4":"Doe1" },' +
+'{"Question":"tohn2", "Ans":"Doe2", "Opt2":"Doe2", "Opt3":"Doe2", "Opt4":"Doe2" },' +
+'{"Question":"uohn1", "Ans":"Doe1", "Opt2":"Doe1", "Opt3":"Doe1", "Opt4":"Doe1" },' +
+'{"Question":"vohn2", "Ans":"Doe2", "Opt2":"Doe2", "Opt3":"Doe2", "Opt4":"Doe2" },' +
+'{"Question":"wohn1", "Ans":"Doe1", "Opt2":"Doe1", "Opt3":"Doe1", "Opt4":"Doe1" },' +
+'{"Question":"xohn2", "Ans":"Doe2", "Opt2":"Doe2", "Opt3":"Doe2", "Opt4":"Doe2" }]}';
+
+const qnumber = parseInt(randomNumber(0, 15));
+
+var optionxx = [];
+while(optionxx.length < 4){
+    var r = randomNumber(0, 4);
+    if(optionxx.indexOf(r) === -1) optionxx.push(r);
+}
+
+console.log(optionxx);
+
+
+const obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.QuestionsSet[qnumber].Question + "</br>(a) " + obj.QuestionsSet[qnumber].Ans + "</br>(b) " + obj.QuestionsSet[qnumber].Opt2 + "</br>(c) " + obj.QuestionsSet[qnumber].Opt3 + "</br>(d) " + obj.QuestionsSet[qnumber].Opt4;
+</script>
+
+</body>
+</html>
